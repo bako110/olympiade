@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archives - Olympiades du FASO</title>
+
+    <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="archives.css">
-   <script src="archives.js" defer></script>
+
+    <!-- Script -->
+    <script src="archives.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -21,35 +25,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="archives.html">Archives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#disciplines">Disciplines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#inscription">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="archives.html">Archives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#disciplines">Disciplines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#inscription">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section Archives -->
+    <!-- Hero Section -->
     <section class="archive-hero">
-        <div class="container">
-            <div class="text-center">
-                <h1 class="display-3 fw-bold mb-4">
-                    <i class="fas fa-images me-3"></i>Archives Média
-                </h1>
-                <p class="lead">Revivez les moments forts en images et vidéos des Olympiades du FASO</p>
-            </div>
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-images me-3"></i>Archives Média
+            </h1>
+            <p class="lead">Revivez les moments forts en images et vidéos des Olympiades du FASO</p>
         </div>
     </section>
 
@@ -85,147 +77,153 @@
         </div>
     </section>
 
-    <!-- Contenu de l'édition 2024 -->
+    <!-- Contenu édition 2024 -->
     <div id="edition-2024" class="edition-content">
-        <!-- Filtres par catégorie -->
+
+        <!-- Filtres -->
         <section class="py-3">
-            <div class="container">
-                <div class="text-center filter-tabs">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-th me-2"></i>Tout afficher
-                    </button>
-                    <button class="filter-btn" data-filter="photos">
-                        <i class="fas fa-image me-2"></i>Photos
-                    </button>
-                    <button class="filter-btn" data-filter="videos">
-                        <i class="fas fa-video me-2"></i>Vidéos
-                    </button>
-                    <button class="filter-btn" data-filter="football">
-                        <i class="fas fa-futbol me-2"></i>Football
-                    </button>
-                    <button class="filter-btn" data-filter="dames">
-                        <i class="fas fa-chess me-2"></i>Jeu de Dames
-                    </button>
-                    <button class="filter-btn" data-filter="petanque">
-                        <i class="fas fa-circle me-2"></i>Pétanque
-                    </button>
-                    <button class="filter-btn" data-filter="ceremonie">
-                        <i class="fas fa-award me-2"></i>Cérémonies
-                    </button>
-                </div>
+            <div class="container text-center filter-tabs">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th me-2"></i>Tout afficher</button>
+                <button class="filter-btn" data-filter="photos"><i class="fas fa-image me-2"></i>Photos</button>
+                <button class="filter-btn" data-filter="videos"><i class="fas fa-video me-2"></i>Vidéos</button>
+                <button class="filter-btn" data-filter="football"><i class="fas fa-futbol me-2"></i>Football</button>
+                <button class="filter-btn" data-filter="dames"><i class="fas fa-chess me-2"></i>Jeu de Dames</button>
+                <button class="filter-btn" data-filter="petanque"><i class="fas fa-circle me-2"></i>Pétanque</button>
+                <button class="filter-btn" data-filter="ceremonie"><i class="fas fa-award me-2"></i>Cérémonies</button>
             </div>
         </section>
 
-        <!-- Galerie média -->
+        <!-- Galerie -->
         <section class="py-5">
             <div class="container">
                 <div class="row g-4 media-gallery">
-                    <!-- Photos Cérémonie -->
+
+                    <!-- Section Cérémonies -->
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
-                        <img src="/images/archives/2024/ceremonie-ouverture.jpg" alt="Cérémonie d'ouverture 2024" 
+                        <img src="/images/cerer.jpg" alt="Cérémonie d'ouverture 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
-                             data-src="/images/archives/2024/ceremonie-ouverture.jpg" 
+                             data-src="/images/invites.jpg" 
                              data-title="Cérémonie d'ouverture" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Cérémonie d'ouverture
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Cérémonie d'ouverture</small>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
-                        <img src="/images/archives/2024/remise-prix.jpg" alt="Remise des prix 2024" 
+                        <img src="/images/ceremonie.jpg" alt="Remise des prix 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
-                             data-src="/images/archives/2024/remise-prix.jpg" 
+                             data-src="/images/finaliste.jpg" 
                              data-title="Cérémonie de remise des prix" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Cérémonie de remise des prix
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Cérémonie de remise des prix</small>
                         </div>
                     </div>
 
-                    <!-- Photos Football -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
+                        <img src="/images/remise2.jpg" alt="Remise des prix - Candidats" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/remise2.jpg" 
+                             data-title="Candidats recevant leurs prix" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Quelques invités spéciaux</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
+                        <img src="/images/remise3.jpg" alt="Remise des prix - Groupe" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/remise3.jpg" 
+                             data-title="Photo de groupe lors de la remise des prix" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Photo de groupe lors de la remise des prix</small>
+                        </div>
+                    </div>
+
+                    <!-- Participants -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="participants">
+                        <img src="/images/participants1.jpg" alt="Participants en activité" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/participants1.jpg" 
+                             data-title="Participants en activité" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-users me-1"></i>Participants en activité</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 media-item" data-category="participants">
+                        <img src="/images/participants2.jpg" alt="Ambiance générale" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/participants2.jpg" 
+                             data-title="Ambiance générale" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-users me-1"></i>Ambiance générale</small>
+                        </div>
+                    </div>
+
+                    <!-- Invités -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="invites">
+                        <img src="/images/invite1.jpg" alt="Discours d'un invité" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/invite1.jpg" 
+                             data-title="Discours d'un invité" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-user-tie me-1"></i>Discours d'un invité</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 media-item" data-category="invites">
+                        <img src="/images/invite2.jpg" alt="Rencontre avec les officiels" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/invite2.jpg" 
+                             data-title="Rencontre avec les officiels" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted"><i class="fas fa-user-tie me-1"></i>Rencontre avec les officiels</small>
+                        </div>
+                    </div>
+
+                    <!-- Football -->
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos football">
                         <img src="/images/archives/2024/football-minimes.jpg" alt="Football Minimes 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
                              data-src="/images/archives/2024/football-minimes.jpg" 
                              data-title="Football Minimes - Finale" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Football Minimes - Finale
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Football Minimes - Finale</small>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos football">
-                        <img src="/images/archives/2024/football-seniors.jpg" alt="Football Seniors 2024" 
+                        <img src="/images/footseniors.jpg" alt="Football Seniors 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
-                             data-src="/images/archives/2024/football-seniors.jpg" 
+                             data-src="/images/footsenior.jpg" 
                              data-title="Football Seniors - Match décisif" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Football Seniors - Match décisif
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Football Seniors - Match décisif</small>
                         </div>
                     </div>
 
-                    <!-- Photos Jeu de Dames -->
+                    <!-- Jeu de Dames -->
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos dames">
-                        <img src="/images/archives/2024/jeu-dames.jpg" alt="Jeu de Dames 2024" 
+                        <img src="/images/dame.jpg" alt="Jeu de Dames 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
-                             data-src="/images/archives/2024/jeu-dames.jpg" 
+                             data-src="/images/dames.jpg" 
                              data-title="Tournoi de Dames - Concentration" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Tournoi de Dames - Concentration
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Tournoi de Dames - Concentration</small>
                         </div>
                     </div>
 
-                    <!-- Photos Pétanque -->
+                    <!-- Pétanque -->
                     <div class="col-lg-4 col-md-6 media-item" data-category="photos petanque">
-                        <img src="/images/archives/2024/petanque.jpg" alt="Pétanque 2024" 
+                        <img src="/images/petanque.jpg" alt="Pétanque 2024" 
                              data-bs-toggle="modal" data-bs-target="#mediaModal" 
-                             data-src="/images/archives/2024/petanque.jpg" 
+                             data-src="/images/petanques.jpg" 
                              data-title="Pétanque - Ambiance conviviale" data-type="image">
                         <div class="media-caption">
-                            <small class="text-muted">
-                                <i class="fas fa-image me-1"></i>Pétanque - Ambiance conviviale
-                            </small>
+                            <small class="text-muted"><i class="fas fa-image me-1"></i>Pétanque - Ambiance conviviale</small>
                         </div>
                     </div>
 
-                    <!-- Vidéos -->
-                    <div class="col-lg-6 media-item" data-category="videos">
-                        <div class="video-thumbnail">
-                            <img src="/images/archives/2024/video-resume-thumb.jpg" alt="Résumé Édition 2024">
-                            <div class="video-overlay">
-                                <i class="fas fa-play-circle fa-5x text-white"></i>
-                            </div>
-                        </div>
-                        <div class="media-caption">
-                            <h6>
-                                <i class="fas fa-video me-1"></i>Résumé de l'édition 2024
-                            </h6>
-                            <small class="text-muted">Les meilleurs moments en 5 minutes</small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 media-item" data-category="videos football">
-                        <div class="video-thumbnail">
-                            <img src="/images/archives/2024/finale-football-thumb.jpg" alt="Finale Football Seniors">
-                            <div class="video-overlay">
-                                <i class="fas fa-play-circle fa-5x text-white"></i>
-                            </div>
-                        </div>
-                        <div class="media-caption">
-                            <h6>
-                                <i class="fas fa-video me-1"></i>Finale Football Seniors
-                            </h6>
-                            <small class="text-muted">Le match le plus attendu</small>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -265,7 +263,7 @@
         </div>
     </footer>
 
-    <!-- Modal pour afficher les médias -->
+    <!-- Modal -->
     <div class="modal fade" id="mediaModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -286,6 +284,5 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

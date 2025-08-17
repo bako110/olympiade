@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
     <script src="inscription.js" defer></script>
+    <style>
+        .designed-by-badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -41,6 +51,12 @@
                         <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
                     </li>
                 </ul>
+            </div>
+            <!-- Badge "Conçu par Robert Bako" -->
+            <div class="ms-3">
+                <span class="designed-by-badge">
+                    <i class="fas fa-user-tie me-1"></i> Conçu par Robert Bako
+                </span>
             </div>
         </div>
     </nav>
@@ -75,7 +91,6 @@
                             Votre navigateur ne supporte pas la lecture de vidéos HTML5.
                         </video>
                     </div>
-
                 <!-- Countdown Timer -->
                 <div class="countdown-timer mt-5">
                     <h3 class="mb-4">Temps restant pour s'inscrire</h3>
@@ -100,7 +115,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Disciplines Preview -->
         <section class="py-5">
             <div class="container">
@@ -180,7 +194,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Statistics -->
         <section class="py-5 bg-light">
             <div class="container">
@@ -216,7 +229,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Archives des éditions précédentes -->
         <section class="py-5 archives-section">
             <div class="container">
@@ -271,6 +283,18 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <!-- Section "L'Organisateur" -->
+                                <h3 class="text-primary mt-5 mb-4">L'Organisateur</h3>
+                                <div class="d-flex align-items-center p-3 bg-light rounded">
+                                    <img src="https://via.placeholder.com/80" alt="Robert Bako" class="rounded-circle me-3" style="width: 80px; height: 80px;">
+                                    <div>
+                                        <h5 class="mb-1">Robert Bako</h5>
+                                        <p class="mb-2">Concepteur et organisateur des Olympiades du Faso, passionné par le sport et l’unité nationale. Mon objectif est de promouvoir l’excellence sportive et la cohésion sociale à travers cet événement.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">
+                                            <i class="fab fa-linkedin me-1"></i> Me contacter
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,7 +344,7 @@
                                 <h6>Conditions:</h6>
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-check text-success me-2"></i>Joueurs âgés de 18 ans et plus</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Équipes de 6 joueurs + 6 remplaçants</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Équipes de 7 joueurs + 5 remplaçants</li>
                                 </ul>
                             </div>
                         </div>
@@ -357,7 +381,7 @@
                                     <span class="badge bg-warning text-dark fs-6">1 000 FCFA</span>
                                     <span class="text-muted">Équipes de 3</span>
                                 </div>
-                                <<p>Compétition de pétanque traditionnelle en équipes. Jeu d'adresse et de stratégie dans une ambiance conviviale.</p>
+                                <p>Compétition de pétanque traditionnelle en équipes. Jeu d'adresse et de stratégie dans une ambiance conviviale.</p>
                                 <h6>Conditions:</h6>
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-check text-success me-2"></i>Équipes de 3 joueurs</li>
@@ -434,7 +458,6 @@
                                                 Paiement sécurisé par Orange Money / Moov Money
                                             </small>
                                         </div>
-
                                     </div>
                                 </form>
                             </div>
@@ -628,7 +651,13 @@
             </div>
             <hr class="my-4">
             <div class="text-center">
-                <p>&copy; 2025 Olympiades du FASO. Tous droits réservés.</p>
+                <p>
+                    &copy; 2025 Olympiades du FASO. Tous droits réservés.
+                    <br>
+                    <small class="text-muted">
+                        Site conçu et organisé par <a href="#" class="text-decoration-none">Robert Bako</a>
+                    </small>
+                </p>
             </div>
         </div>
     </footer>
