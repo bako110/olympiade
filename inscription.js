@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = { telephone, discipline, disciplineType, price, coachName, teamName, playerList, duoNames, soloName };
 
         try {
-            const res = await fetch('https://olympiade.onrender.com/api/inscription', {
+            const res = await fetch('https://olympiade.onrender.comd/api/inscription', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
