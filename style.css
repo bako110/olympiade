@@ -236,3 +236,39 @@ body {
         margin-top: 30px;
     }
 }
+
+.designed-by-badge {
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+.designed-by-badge i {
+    color: #fff;
+    margin-right: 4px;
+}
+.designed-by-badge a {
+    color: inherit;
+    text-decoration: none !important;
+}
+.designed-by-badge:hover {
+    background: linear-gradient(135deg, #6610f2, #0d6efd);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    color: #fff;
+}
+.header-badge {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.footer-badge {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
