@@ -10,14 +10,39 @@
     <script src="scripts.js" defer></script>
     <script src="inscription.js" defer></script>
     <style>
-        .designed-by-badge {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+.designed-by-badge {
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.designed-by-badge i {
+    color: #ffd700; /* or pour l’icône */
+}
+
+.designed-by-badge:hover {
+    background: linear-gradient(135deg, #6610f2, #0d6efd);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.header-badge {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer-badge {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
     </style>
 </head>
 <body>
@@ -54,10 +79,11 @@
             </div>
             <!-- Badge "Conçu par Robert Bako" -->
             <div class="ms-3">
-                <span class="designed-by-badge">
-                    <i class="fas fa-user-tie me-1"></i> Conçu par Robert Bako
+                <span class="designed-by-badge header-badge">
+                    <i class="fas fa-crown me-1"></i> <strong>Robert Bako</strong>
                 </span>
             </div>
+
         </div>
     </nav>
 
@@ -654,9 +680,11 @@
                 <p>
                     &copy; 2025 Olympiades du FASO. Tous droits réservés.
                     <br>
-                    <small class="text-muted">
-                        Site conçu et organisé par <a href="#" class="text-decoration-none">Robert Bako</a>
-                    </small>
+                    <div class="text-center mt-4">
+                        <span class="designed-by-badge footer-badge">
+                            <i class="fas fa-gem me-1"></i>Excellence   <strong>  Robert Bako</strong>
+                        </span>
+                    </div>
                 </p>
             </div>
         </div>
