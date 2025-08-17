@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dynamicSection = document.getElementById('dynamicSection');
     const confirmationModalEl = document.getElementById('confirmationModal');
     const modalBodyEl = confirmationModalEl.querySelector('.modal-body');
+    const button = document.getElementById('pay-button');
 
     function updateForm() {
         const selectedOption = disciplineSelect.options[disciplineSelect.selectedIndex];
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let html = '';
         switch(type) {
             case 'football':
-                html += `
+                html = `
                     <div class="mb-3">
                         <label class="form-label">Nom complet de l'entraîneur *</label>
                         <input type="text" id="coachName" name="coachName" class="form-control" required>
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 break;
             case 'duo':
-                html += `
+                html = `
                     <div class="mb-3">
                         <label class="form-label">Nom des 2 participants *</label>
                         <input type="text" id="duoNames" name="duoNames" class="form-control" placeholder="Séparer par une virgule" required>
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 break;
             case 'solo':
-                html += `
+                html = `
                     <div class="mb-3">
                         <label class="form-label">Nom du participant *</label>
                         <input type="text" id="soloName" name="soloName" class="form-control" required>
@@ -65,6 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // Bouton en mode "envoi en cours"
+        button.disabled = true;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Envoi des données...';
 
         const telephone = document.getElementById('telephone').value;
         const discipline = disciplineSelect.value;
@@ -97,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dynamicSection.innerHTML = '';
             totalAmountEl.innerText = '0 FCFA';
 
-            // Injecter les données dans le modal
+            // Préparer infos participants pour le modal
             let participantInfo = '';
             if (disciplineType === 'football') {
                 participantInfo = `
@@ -125,9 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const confirmationModal = new bootstrap.Modal(confirmationModalEl);
             confirmationModal.show();
 
+            // Rétablir le bouton
+            button.disabled = false;
+            button.innerHTML = '<i class="fas fa-credit-card me-2"></i> Procéder au paiement';
+
         } catch (err) {
             alert('Erreur lors de l\'envoi des données.');
             console.error(err);
+            button.disabled = false;
+            button.innerHTML = '<i class="fas fa-credit-card me-2"></i> Procéder au paiement';
         }
     });
 });
