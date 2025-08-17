@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives - Olympiades du FASO</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="archives.css">
+   <script src="archives.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-trophy me-2"></i>Olympiades du FASO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="archives.html">Archives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#disciplines">Disciplines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inscription">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Archives -->
+    <section class="archive-hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-3 fw-bold mb-4">
+                    <i class="fas fa-images me-3"></i>Archives Média
+                </h1>
+                <p class="lead">Revivez les moments forts en images et vidéos des Olympiades du FASO</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sélecteur d'édition -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card edition-card mb-4">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h3 class="mb-0">Sélectionner une édition</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary btn-lg w-100 edition-btn active" data-edition="2024">
+                                        <i class="fas fa-trophy me-2"></i>
+                                        1ère Édition - 2024
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-secondary btn-lg w-100 edition-btn" data-edition="2025" disabled>
+                                        <i class="fas fa-clock me-2"></i>
+                                        2ème Édition - 2025
+                                        <br><small>(À venir)</small>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu de l'édition 2024 -->
+    <div id="edition-2024" class="edition-content">
+        <!-- Filtres par catégorie -->
+        <section class="py-3">
+            <div class="container">
+                <div class="text-center filter-tabs">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th me-2"></i>Tout afficher
+                    </button>
+                    <button class="filter-btn" data-filter="photos">
+                        <i class="fas fa-image me-2"></i>Photos
+                    </button>
+                    <button class="filter-btn" data-filter="videos">
+                        <i class="fas fa-video me-2"></i>Vidéos
+                    </button>
+                    <button class="filter-btn" data-filter="football">
+                        <i class="fas fa-futbol me-2"></i>Football
+                    </button>
+                    <button class="filter-btn" data-filter="dames">
+                        <i class="fas fa-chess me-2"></i>Jeu de Dames
+                    </button>
+                    <button class="filter-btn" data-filter="petanque">
+                        <i class="fas fa-circle me-2"></i>Pétanque
+                    </button>
+                    <button class="filter-btn" data-filter="ceremonie">
+                        <i class="fas fa-award me-2"></i>Cérémonies
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie média -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4 media-gallery">
+                    <!-- Photos Cérémonie -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
+                        <img src="/images/archives/2024/ceremonie-ouverture.jpg" alt="Cérémonie d'ouverture 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/ceremonie-ouverture.jpg" 
+                             data-title="Cérémonie d'ouverture" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Cérémonie d'ouverture
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos ceremonie">
+                        <img src="/images/archives/2024/remise-prix.jpg" alt="Remise des prix 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/remise-prix.jpg" 
+                             data-title="Cérémonie de remise des prix" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Cérémonie de remise des prix
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Photos Football -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos football">
+                        <img src="/images/archives/2024/football-minimes.jpg" alt="Football Minimes 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/football-minimes.jpg" 
+                             data-title="Football Minimes - Finale" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Football Minimes - Finale
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos football">
+                        <img src="/images/archives/2024/football-seniors.jpg" alt="Football Seniors 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/football-seniors.jpg" 
+                             data-title="Football Seniors - Match décisif" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Football Seniors - Match décisif
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Photos Jeu de Dames -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos dames">
+                        <img src="/images/archives/2024/jeu-dames.jpg" alt="Jeu de Dames 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/jeu-dames.jpg" 
+                             data-title="Tournoi de Dames - Concentration" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Tournoi de Dames - Concentration
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Photos Pétanque -->
+                    <div class="col-lg-4 col-md-6 media-item" data-category="photos petanque">
+                        <img src="/images/archives/2024/petanque.jpg" alt="Pétanque 2024" 
+                             data-bs-toggle="modal" data-bs-target="#mediaModal" 
+                             data-src="/images/archives/2024/petanque.jpg" 
+                             data-title="Pétanque - Ambiance conviviale" data-type="image">
+                        <div class="media-caption">
+                            <small class="text-muted">
+                                <i class="fas fa-image me-1"></i>Pétanque - Ambiance conviviale
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Vidéos -->
+                    <div class="col-lg-6 media-item" data-category="videos">
+                        <div class="video-thumbnail">
+                            <img src="/images/archives/2024/video-resume-thumb.jpg" alt="Résumé Édition 2024">
+                            <div class="video-overlay">
+                                <i class="fas fa-play-circle fa-5x text-white"></i>
+                            </div>
+                        </div>
+                        <div class="media-caption">
+                            <h6>
+                                <i class="fas fa-video me-1"></i>Résumé de l'édition 2024
+                            </h6>
+                            <small class="text-muted">Les meilleurs moments en 5 minutes</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 media-item" data-category="videos football">
+                        <div class="video-thumbnail">
+                            <img src="/images/archives/2024/finale-football-thumb.jpg" alt="Finale Football Seniors">
+                            <div class="video-overlay">
+                                <i class="fas fa-play-circle fa-5x text-white"></i>
+                            </div>
+                        </div>
+                        <div class="media-caption">
+                            <h6>
+                                <i class="fas fa-video me-1"></i>Finale Football Seniors
+                            </h6>
+                            <small class="text-muted">Le match le plus attendu</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Olympiades du FASO</h5>
+                    <p>L'événement sportif incontournable du Burkina Faso qui rassemble les talents de tout le pays.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Accueil</a></li>
+                        <li><a href="archives.html" class="text-light">Archives</a></li>
+                        <li><a href="index.html#disciplines" class="text-light">Disciplines</a></li>
+                        <li><a href="index.html#contact" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Olympiades du FASO. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal pour afficher les médias -->
+    <div class="modal fade" id="mediaModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediaModalTitle">Média</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="mediaModalImage" class="img-fluid" src="" alt="" style="display: none;">
+                    <video id="mediaModalVideo" class="img-fluid" controls style="display: none;">
+                        <source src="" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
