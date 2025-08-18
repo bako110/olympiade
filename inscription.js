@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Bouton en mode "envoi en cours"
         button.disabled = true;
-        button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Envoi des données...';
+        button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Envoi des données, veuillez patienter un instant...';
 
         const telephone = document.getElementById('telephone').value;
         const discipline = disciplineSelect.value;
@@ -132,13 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Rétablir le bouton
             button.disabled = false;
-            button.innerHTML = '<i class="fas fa-credit-card me-2"></i> Procéder au paiement';
+            button.innerHTML = '<i class="fas fa-check me-2"></i> Valider l\'inscription';
 
         } catch (err) {
-            alert('Erreur lors de l\'envoi des données.');
+            alert('Erreur lors de l\'envoi des données, veuillez réessayer.');
             console.error(err);
             button.disabled = false;
-            button.innerHTML = '<i class="fas fa-credit-card me-2"></i> Procéder au paiement';
+            button.innerHTML = '<i class="fas fa-check me-2"></i> Valider l\'inscription';
         }
     });
 });
