@@ -9,60 +9,56 @@
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
     <script src="inscription.js" defer></script>
-    
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#" onclick="showPage('home')">
-                <i class="fas fa-trophy me-2"></i>Olympiades du FASO
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('home')">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('about')">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('disciplines')">Disciplines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('inscription')">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('actualites')">Actualités</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Badge "Conçu par Robert Bako" -->
-            <div class="ms-3">
-<span class="designed-by-badge header-badge">
-    <a href="https://wa.me/22657443692" target="_blank">
-        <i class="fas fa-lightbulb me-1"></i>
-        <span class="concepteur-text">Conçu par</span>
-        <span class="logo-rb">
-            <strong>RB</strong>
-        </span>
-    </a>
-</span>
-
-
-            </div>
-
+   <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark gradient-bg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#" onclick="showPage('home', this)">
+            <i class="fas fa-trophy me-2"></i>Olympiades du FASO
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('home', this)">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('about', this)">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('disciplines', this)">Disciplines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('inscription', this)">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('actualites', this)">Actualités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('contact', this)">Contact</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+        <!-- Badge "Conçu par Robert Bako" -->
+        <div class="ms-3">
+            <span class="designed-by-badge header-badge">
+                <a href="https://wa.me/22657443692" target="_blank">
+                    <i class="fas fa-lightbulb me-1"></i>
+                    <span class="concepteur-text">Conçu par</span>
+                    <span class="logo-rb">
+                        <strong>RB</strong>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+</nav>
 
     <!-- PAGE ACCUEIL -->
-    <div id="home-page" class="page-content active">
+    <div id="home-page" class="page-content">
         <!-- Hero Section -->
         <section class="hero-section text-center position-relative">
             <div class="container position-relative" style="z-index: 2;">
@@ -91,6 +87,7 @@
                             Votre navigateur ne supporte pas la lecture de vidéos HTML5.
                         </video>
                     </div>
+                </div>
                 <!-- Countdown Timer -->
                 <div class="countdown-timer mt-5">
                     <h3 class="mb-4">Temps restant pour s'inscrire</h3>
@@ -115,6 +112,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Disciplines Preview -->
         <section class="py-5">
             <div class="container">
@@ -194,6 +192,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Statistics -->
         <section class="py-5 bg-light">
             <div class="container">
@@ -229,6 +228,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Archives des éditions précédentes -->
         <section class="py-5 archives-section">
             <div class="container">
@@ -247,7 +247,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Ajoute d'autres éditions ici si nécessaire -->
                 </div>
             </div>
         </section>
@@ -283,7 +282,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- Section "L'Organisateur" -->
                                 <h3 class="text-primary mt-5 mb-4">L'Organisateur</h3>
                                 <div class="d-flex align-items-center p-3 bg-light rounded">
                                     <img src="https://via.placeholder.com/80" alt="Robert Bako" class="rounded-circle me-3" style="width: 80px; height: 80px;">
@@ -309,7 +307,6 @@
             <div class="container">
                 <h1 class="display-4 text-center mb-5">Nos Disciplines</h1>
                 <div class="row g-4">
-                    <!-- Football Minimes -->
                     <div class="col-lg-6">
                         <div class="card h-100 border-0 shadow">
                             <div class="card-header bg-primary text-white">
@@ -329,7 +326,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Football Seniors -->
                     <div class="col-lg-6">
                         <div class="card h-100 border-0 shadow">
                             <div class="card-header bg-success text-white">
@@ -349,7 +345,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Jeu de Dames -->
                     <div class="col-lg-6">
                         <div class="card h-100 border-0 shadow">
                             <div class="card-header bg-info text-white">
@@ -370,7 +365,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Pétanque -->
                     <div class="col-lg-6">
                         <div class="card h-100 border-0 shadow">
                             <div class="card-header bg-warning text-dark">
@@ -406,31 +400,18 @@
                         <div class="card border-0 shadow-lg">
                             <div class="card-body p-5">
                                 <form id="inscriptionForm">
-                                    <!-- Discipline -->
                                     <div class="mb-3">
                                         <label class="form-label">Discipline choisie *</label>
                                         <select class="form-control" id="discipline" name="discipline" required>
                                             <option value="">Sélectionnez une discipline</option>
-                                            <option value="football-minimes" data-price="7000" data-type="football">
-                                                Football Minimes (45KG) - 7 000 FCFA
-                                            </option>
-                                            <option value="football-seniors" data-price="10000" data-type="football">
-                                                Football Seniors - 10 000 FCFA
-                                            </option>
-                                            <option value="jeu-dames" data-price="500" data-type="solo">
-                                                Jeu de Dames - 500 FCFA
-                                            </option>
-                                            <option value="petanque" data-price="1000" data-type="duo">
-                                                Jeu de Pétanque - 1 000 FCFA
-                                            </option>
+                                            <option value="football-minimes" data-price="7000" data-type="football">Football Minimes (45KG) - 7 000 FCFA</option>
+                                            <option value="football-seniors" data-price="10000" data-type="football">Football Seniors - 10 000 FCFA</option>
+                                            <option value="jeu-dames" data-price="500" data-type="solo">Jeu de Dames - 500 FCFA</option>
+                                            <option value="petanque" data-price="1000" data-type="duo">Jeu de Pétanque - 1 000 FCFA</option>
                                         </select>
                                     </div>
-                                    <!-- Le reste du formulaire, caché par défaut -->
                                     <div id="formDetails" style="display: none;">
-                                        <!-- Section dynamique selon discipline -->
-                                        <div id="dynamicSection">
-                                            <!-- Champs dynamiques remplis par JS -->
-                                        </div>
+                                        <div id="dynamicSection"></div>
                                         <div class="row mt-3">
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label">Téléphone *</label>
@@ -444,19 +425,14 @@
                                         <div class="mb-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="conditions" required>
-                                                <label class="form-check-label" for="conditions">
-                                                    J'accepte les conditions générales de participation *
-                                                </label>
+                                                <label class="form-check-label" for="conditions">J'accepte les conditions générales de participation *</label>
                                             </div>
                                         </div>
                                         <div class="d-grid gap-2">
                                             <button type="submit" class="btn btn-primary btn-lg" id="pay-button">
-                                                <i class="fas fa-credit-card me-2"></i>
-                                                Procéder au paiement
+                                                <i class="fas fa-credit-card me-2"></i>Procéder au paiement
                                             </button>
-                                            <small class="text-muted text-center">
-                                                Paiement sécurisé par Orange Money / Moov Money
-                                            </small>
+                                            <small class="text-muted text-center">Paiement sécurisé par Orange Money / Moov Money</small>
                                         </div>
                                     </div>
                                 </form>
@@ -659,7 +635,6 @@
                             <a href="https://wa.me/22657443692" target="_blank">
                                 <i class="fas fa-gem me-1"></i> <strong>Robert Bako</strong>
                             </a>
-
                         </span>
                     </div>
                 </p>

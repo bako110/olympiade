@@ -1,12 +1,32 @@
 // ==============================
 // Navigation entre les pages
 // ==============================
-function showPage(pageId) {
+function showPage(pageId, link) {
+    // Masquer toutes les pages
     const pages = document.querySelectorAll('.page-content');
     pages.forEach(page => page.classList.remove('active'));
+
+    // Afficher la page demandée
     document.getElementById(pageId + '-page').classList.add('active');
+
+    // Ajouter scroll en haut
     window.scrollTo(0, 0);
+
+    // Retirer la classe active de tous les liens
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+
+    // Ajouter la classe active au lien cliqué
+    if(link) link.classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Afficher la page d'accueil par défaut
+    document.getElementById('home-page').classList.add('active');
+
+    // Activer le lien correspondant
+    const defaultLink = document.querySelector('.nav-link[onclick^="showPage(\'home\'"]');
+    if(defaultLink) defaultLink.classList.add('active');
+});
 
 // Fermer le menu après clic sur un lien
 document.querySelectorAll('.navbar-nav .nav-link').forEach(navLink => {

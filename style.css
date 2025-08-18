@@ -15,6 +15,23 @@ body {
     background-color: var(--light);
 }
 
+/* Animations */
+@keyframes float {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Background & Gradients */
 .gradient-bg {
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue), var(--accent-cyan));
 }
@@ -43,11 +60,7 @@ body {
     animation: float 20s infinite linear;
 }
 
-@keyframes float {
-    0% { transform: translateX(-100px); }
-    100% { transform: translateX(calc(100vw + 100px)); }
-}
-
+/* Layout */
 .page-content {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
@@ -57,13 +70,9 @@ body {
     display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 /* Cards */
-.discipline-card, .archive-card {
+.discipline-card,
+.archive-card {
     border: none;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -71,21 +80,12 @@ body {
     overflow: hidden;
 }
 
-.discipline-card:hover, .archive-card:hover {
+.discipline-card:hover,
+.archive-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* Countdown Timer */
-.countdown-timer {
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-/* Stats Cards */
 .stats-card {
     background: white;
     border-radius: 15px;
@@ -99,7 +99,26 @@ body {
     transform: scale(1.05);
 }
 
+/* Countdown & Timer */
+.countdown-timer {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin: 2rem 0;
+    color: white;
+}
+
+#days, #hours, #minutes, #seconds {
+    color: var(--warning-red);
+}
+
 /* Navigation */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #ffc107 !important;
+}
+
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
@@ -173,22 +192,6 @@ body {
     color: var(--accent-cyan);
 }
 
-/* Loading Animation */
-.loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid var(--secondary-blue);
-    border-radius: 50%;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 /* Price Tag */
 .price-tag {
     background: var(--success-green);
@@ -222,19 +225,15 @@ body {
     background-color: var(--light);
 }
 
-/* Countdown Numbers */
-#days, #hours, #minutes, #seconds {
-    color: var(--warning-red);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-    .countdown-timer {
-        margin-top: 30px;
-    }
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--secondary-blue);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
 }
 
 /* Badge "Conçu par RB" */
@@ -300,4 +299,19 @@ body {
 .footer-badge {
     font-size: 0.85rem;
     opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .countdown-timer {
+        margin-top: 30px;
+    }
+
+    .stats-card {
+        padding: 1.5rem;
+    }
 }
