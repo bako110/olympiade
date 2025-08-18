@@ -642,27 +642,89 @@
         </div>
     </footer>
 
-    <!-- Modal de confirmation -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirmation d'inscription</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+<div class="modal fade" id="confirmationModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmation d'inscription</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+                    <h4>Inscription réussie !</h4>
+                    <p>Votre inscription aux Olympiades du FASO a été enregistrée avec succès. 
+                       Vous recevrez bientôt un email de confirmation avec les détails de votre participation.</p>
                 </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
-                        <h4>Inscription réussie !</h4>
-                        <p>Votre inscription aux Olympiades du FASO a été enregistrée avec succès. Vous recevrez bientôt un email de confirmation avec les détails de votre participation.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
-                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <!-- Bouton Fermer -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                
+                <!-- Bouton Paiement redirige vers la page Paiement -->
+                <button type="button" class="btn btn-success" 
+                        data-bs-dismiss="modal" 
+                        onclick="showPage('paiement')">
+                    💳 Payer les frais d'inscription
+                </button>
             </div>
         </div>
     </div>
+</div>
+
+
+<!-- PAGE PAIEMENT -->
+<div id="paiement-page" class="page-content" style="margin-top: 80px; display: none;">
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Choisissez votre moyen de paiement</h1>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    
+                    <!-- Liste des moyens de paiement -->
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action" onclick="showInstructions('orange')">
+                            Orange Money
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="showInstructions('moov')">
+                            Moov Money
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="showInstructions('telecel')">
+                            Telecel Money
+                        </a>
+                    </div>
+                    
+                    <!-- Instructions dynamiques -->
+                    <div id="instructions" class="mt-4" style="display:none;">
+                        <h4 class="mb-3">Instructions de paiement :</h4>
+                        <p id="instructions-text" class="alert alert-info"></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+function showInstructions(operator) {
+    let text = "";
+    switch(operator) {
+        case "orange":
+            text = "Pour payer via Orange Money, composez le code suivant : <br><strong>*144*2*1*11111111*montant#</strong>";
+            break;
+        case "moov":
+            text = "Pour payer via Moov Money, composez le code suivant : <br><strong>*555*4*1*11111111*montant#</strong>";
+            break;
+        case "telecel":
+            text = "Pour payer via Telecel Money, composez le code suivant : <br><strong>*155*1*1*11111111*montant#</strong>";
+            break;
+    }
+    document.getElementById("instructions-text").innerHTML = text;
+    document.getElementById("instructions").style.display = "block";
+}
+</script>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
