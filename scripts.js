@@ -1,5 +1,5 @@
 // ==============================
-// Navigation entre les pages
+// Navigation entre les pages  //
 // ==============================
 function showPage(pageId, link) {
     // Masquer toutes les pages
